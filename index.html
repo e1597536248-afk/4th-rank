@@ -53,14 +53,12 @@
     from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
     const firebaseConfig = {
-        apiKey: "AIzaSyBCDpMQPzq25-q8wuhZ8QZuFlALkSTJl7s",
-        authDomain: "rank-5c4bf.firebaseapp.com",
-        databaseURL: "https://rank-5c4bf-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "rank-5c4bf",
-        storageBucket: "rank-5c4bf.firebasestorage.app",
-        messagingSenderId: "337282360146",
-        appId: "1:337282360146:web:f149cc268a2633a378508b",
-        measurementId: "G-MN6DLNKPL2"
+      apiKey: "AIzaSyD9W8pPYsraqbtRFHj5e2BDCZyQYThJRRU",
+      authDomain: "th-rank-d687c.firebaseapp.com",
+      projectId: "th-rank-d687c",
+      storageBucket: "th-rank-d687c.firebasestorage.app",
+      messagingSenderId: "1086981584145",
+      appId: "1:1086981584145:web:e90201ec3260a52df288b0"
     };
 
     const app = initializeApp(firebaseConfig);
@@ -94,7 +92,7 @@
         }
     };
 
-    // 即時監聽資料庫變化並更新排行榜前 10 名
+    // 即時監聽資料庫變化並更新排行榜前 100 名
     const q = query(scoresRef, orderBy("score", "desc"), limit(100));
     onSnapshot(q, (snapshot) => {
         const tbody = document.getElementById("leaderboard-body");
